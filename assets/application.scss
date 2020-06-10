@@ -1,1 +1,13 @@
-// put your styles here
+@import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css";
+/* prettier-ignore */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Rubik:400,500&display=swap);
+@import "scss/margins-padding";
+@import "scss/grid-styles";
+@import "scss/variables";
+@import "scss/header";
+@import "scss/footer";
+
+body {
+    font-family: "Rubik";
+}
