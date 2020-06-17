@@ -1,0 +1,31 @@
+.main-wrapper {
+    max-width: $max-width;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.y-padding {
+    padding: $padding 0rem;
+}
+
+.x-padding {
+    padding: 0rem $padding;
+}
+
+.xy-padding {
+    padding: $padding;
+}
+
+.spacer {
+    padding: 3rem 0rem;
+}

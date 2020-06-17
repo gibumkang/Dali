@@ -1,10 +1,10 @@
 [
     {
-        "name": "Ben Kang",
-        "theme_name": "Themekit Dali Theme",
+        "name": "theme_info",
+        "theme_name": "Dali",
+        "theme_author": "Ben Kang",
         "theme_version": "1.0.0",
-        "theme_author": "mydigitalcanvas.com",
-        "theme_documentation_url": "https://github.com/Shopify/themekit",
-        "theme_support_url": "https://github.com/Shopify/themekit/issues"
+        "theme_documentation_url": "https://mydigitalcanvas.com/dali/support",
+        "theme_support_email": "hello@mydigitalcanvas.com"
     }
 ]

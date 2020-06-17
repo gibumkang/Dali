@@ -1,13 +1,50 @@
+/* bulma */
 @import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css";
 @import "https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css";
 /* prettier-ignore */
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Rubik:400,500&display=swap);
-@import "scss/margins-padding";
-@import "scss/grid-styles";
-@import "scss/variables";
-@import "scss/header";
-@import "scss/footer";
+@import "./variables";
+@import "./helper";
+@import "./slider";
+@import "./grid-styles";
+@import "./header";
+@import "./footer";
+
+/* color palette: https://colors.muz.li/palette/deff99/9cb36b/f7ffe6/efffcc/efffcc */
 
 body {
-    font-family: "Rubik";
+    font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $primary-font;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4,
+h5 {
+    font-size: 1.25rem;
+}
+
+p,
+a,
+div {
+    font-family: $primary-font;
+    font-size: 1rem;
 }

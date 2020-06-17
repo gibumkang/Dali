@@ -1,0 +1,13 @@
+.offset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    & > div {
+        border: 1px solid #ccc;
+        background: #eee;
+        min-height: 100%;
+    }
+}

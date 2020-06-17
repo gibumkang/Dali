@@ -1,10 +1,55 @@
+<div class="full-width centered">
+    <!-- Slider main container -->
+    <div class="swiper-container" id="full-swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/450" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/450" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://picsum.photos/800/450" alt="" />
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!--<div class="swiper-scrollbar"></div>-->
+    </div>
+</div>
+<div class="main-wrapper centered xy-padding">
+    <div class="spacer"></div>
+    <div class="offset-grid">
+        <div><h2>Introduction</h2></div>
+        <div><img src="https://via.placeholder.com/800x450" alt="" /></div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            debitis voluptates impedit sit ab corporis consequatur, iusto
+            necessitatibus mollitia consequuntur, voluptas laborum delectus est
+            rerum harum aspernatur explicabo nisi laudantium.
+        </div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+    </div>
+</div>
 {% for product in collections.frontpage.products limit:4 %}
-  <div>
+<div>
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
     {{ product.price | money }}
-    {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+    {% unless product.available %}<br /><strong>sold out</strong>{% endunless %}
     <a href="{{ product.url | within: collection }}">
-      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+        <img
+            src="{{ product.featured_image.src | img_url: 'large' }}"
+            alt="{{ product.featured_image.alt | escape }}"
+        />
     </a>
-  </div>
+</div>
 {% endfor %}
