@@ -1,0 +1,28 @@
+.standalone-flex {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    section {
+        margin: 1.5rem;
+        flex: 1;
+    }
+    .product-info {
+        h3 {
+            color: #001;
+        }
+        .price {
+            font-family: "Prata", serif;
+        }
+    }
+    .form-flex {
+        display: flex;
+        margin: $padding 0rem;
+        input,
+        section {
+            flex: 1;
+            &:nth-child(1) {
+                margin-right: $padding;
+            }
+        }
+    }
+}

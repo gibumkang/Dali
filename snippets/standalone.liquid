@@ -1,0 +1,73 @@
+{% for product in collections['Featured'].products %}
+<div class="standalone-flex">
+    <section class="image">
+        <div class="swiper-container" id="featured-swiper-container">
+            <div class="swiper-wrapper">
+                {% for image in product.images %}
+                <div class="swiper-slide">
+                    <img src="{{ image.src | product_img_url: "large" }}"
+                    alt="{{ product.featured_image.alt | escape }}" />
+                </div>
+                {% endfor %}
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- <a href="{{ product.url | within: collection }}">
+            {% for image in product.images %} <img src="{{
+                image.src | product_img_url: "large"
+            }}
+            " alt="{{ product.featured_image.alt | escape }}" /> {% endfor %}
+        </a> -->
+    </section>
+    <section class="product-info">
+        <article class="form-flex">
+            <section>
+                <a href="{{ product.url | within: collection }}"
+                ><h3>
+                    {{ product.title }}
+                </h3></a>
+            </section>
+            <section class="price">
+                {{ product.price | money }}</span>
+            </section>
+        </article>
+        <article>
+            {% unless product.available %}<br /><strong>sold out</strong>{%
+            endunless %}
+            <p>
+                {{ product.description }}
+            </p>
+            <p>
+                {{ product.tags }}
+            </p>
+            <form method="post" action="/cart/add">
+                <input
+                    type="hidden"
+                    name="id"
+                    value="{{ product.variants.first.id }}"
+                />
+                <div class="form-flex">
+                    <input
+                        min="1"
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        value="1"
+                        class="input"
+                    />
+                    <input
+                        type="submit"
+                        value="Add to cart"
+                        class="btn button is-success"
+                    />
+                </div>
+            </form>
+        </article>
+    </section>
+</div>
+{% endfor %}

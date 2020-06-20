@@ -5,13 +5,58 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-                <img src="https://picsum.photos/800/450" alt="" />
+                <img src={{ "slider-fun.jpg" | asset_url }} alt="" />
+                <article>
+                    <section>
+                        <h2>Slider Header</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Delectus officia praesentium modi illo
+                            distinctio, necessitatibus pariatur amet optio? Eum
+                            nisi nobis architecto vel obcaecati quasi numquam
+                            nesciunt unde vitae ducimus.
+                        </p>
+                        <a href="#" class="button is-normal is-success"
+                            >Click Me</a
+                        >
+                    </section>
+                </article>
             </div>
             <div class="swiper-slide">
-                <img src="https://picsum.photos/800/450" alt="" />
+                <img src="https://via.placeholder.com/800x450" alt="" />
+                <article>
+                    <section>
+                        <h2>Slider Header</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Delectus officia praesentium modi illo
+                            distinctio, necessitatibus pariatur amet optio? Eum
+                            nisi nobis architecto vel obcaecati quasi numquam
+                            nesciunt unde vitae ducimus.
+                        </p>
+                        <a href="#" class="button is-normal is-success"
+                            >Click Me</a
+                        >
+                    </section>
+                </article>
             </div>
             <div class="swiper-slide">
-                <img src="https://picsum.photos/800/450" alt="" />
+                <img src="https://via.placeholder.com/800x450" alt="" />
+                <article>
+                    <section>
+                        <h2>Slider Header</h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Delectus officia praesentium modi illo
+                            distinctio, necessitatibus pariatur amet optio? Eum
+                            nisi nobis architecto vel obcaecati quasi numquam
+                            nesciunt unde vitae ducimus.
+                        </p>
+                        <a href="#" class="button is-normal is-success"
+                            >Click Me</a
+                        >
+                    </section>
+                </article>
             </div>
         </div>
         <!-- If we need pagination -->
@@ -20,36 +65,45 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!--<div class="swiper-scrollbar"></div>-->
     </div>
 </div>
 <div class="main-wrapper centered xy-padding">
     <div class="spacer"></div>
     <div class="offset-grid">
-        <div><h2>Introduction</h2></div>
-        <div><img src="https://via.placeholder.com/800x450" alt="" /></div>
+        <div><h1>CBD Cooking Oil</h1></div>
         <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            debitis voluptates impedit sit ab corporis consequatur, iusto
-            necessitatibus mollitia consequuntur, voluptas laborum delectus est
-            rerum harum aspernatur explicabo nisi laudantium.
+            <img
+                src="https://via.placeholder.com/800x450"
+                loading="lazy"
+                alt=""
+            />
         </div>
-        <div>Item</div>
-        <div>Item</div>
-        <div>Item</div>
+        <div>
+            <img
+                src="https://via.placeholder.com/800x450"
+                loading="lazy"
+                alt=""
+            />
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cumque
+            maxime quo porro quasi autem animi.
+        </div>
+        <div>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                cumque maxime quo porro quasi autem animi.
+            </article>
+        </div>
+        <div>
+            <img
+                src="https://via.placeholder.com/800x450"
+                loading="lazy"
+                alt=""
+            />
+        </div>
     </div>
 </div>
-{% for product in collections.frontpage.products limit:4 %}
-<div>
-    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-    {{ product.price | money }}
-    {% unless product.available %}<br /><strong>sold out</strong>{% endunless %}
-    <a href="{{ product.url | within: collection }}">
-        <img
-            src="{{ product.featured_image.src | img_url: 'large' }}"
-            alt="{{ product.featured_image.alt | escape }}"
-        />
-    </a>
+<div class="main-wrapper centered xy-padding">
+    {% include 'standalone' %}
 </div>
-{% endfor %}

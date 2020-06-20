@@ -1,11 +1,66 @@
 #full-swiper-container {
-    height: 500px;
-    background: red;
+    height: 650px;
+    &:hover {
+        cursor: pointer;
+    }
     .swiper-slide {
+        position: relative;
+        &:after {
+            content: "\A";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0.5;
+            transition: all 0.25s ease-in-out;
+        }
+        &:hover:after {
+            opacity: 1;
+        }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            position: absolute;
+            vertical-align: top;
+        }
+        article {
+            margin: 0 auto;
+            max-width: 67rem;
+            padding: 0rem 3rem;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            section {
+                flex: 1;
+                max-width: 40rem;
+                text-align: left;
+                p,
+                h2 {
+                    color: #fff;
+                }
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                    p {
+                        display: none;
+                    }
+                }
+                .button {
+                    margin-top: 1.5rem;
+                }
+            }
         }
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #333;
+    }
+}
+
+#featured-swiper-container {
+    max-width: 400px;
 }

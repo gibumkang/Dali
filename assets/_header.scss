@@ -11,4 +11,31 @@ nav {
             padding: 0 0.5rem;
         }
     }
+    &#home-nav a {
+        color: #fff;
+    }
+    .count-container {
+        position: relative;
+        background: #fff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        .cart-count {
+            position: absolute;
+            right: -3px;
+            top: -7px;
+            font-size: 0.65rem;
+            z-index: 10;
+            color: #001;
+            &:before {
+                content: "";
+                background: #fff;
+                padding: 0px 7px;
+                border-radius: 20px;
+                position: relative;
+                right: -10px;
+                z-index: -1;
+            }
+        }
+    }
 }
