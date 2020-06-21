@@ -16,26 +16,39 @@ nav {
     }
     .count-container {
         position: relative;
-        background: #fff;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
         .cart-count {
             position: absolute;
-            right: -3px;
-            top: -7px;
-            font-size: 0.65rem;
-            color: #001;
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+            background: #fff;
+            color: #666;
+            font-size: 0.5rem;
             text-align: center;
-            &:before {
-                content: "";
-                background: #fff;
-                padding: 0px 7px;
-                border-radius: 20px;
-                position: relative;
-                right: -12px;
-                z-index: -1;
-            }
+            right: -7px;
+            top: -5px;
         }
+        // position: relative;
+        // background: #fff;
+        // border-radius: 50%;
+        // width: 10px;
+        // height: 10px;
+        // .cart-count {
+        //     position: absolute;
+        //     right: -3px;
+        //     top: -7px;
+        //     font-size: 0.65rem;
+        //     color: #001;
+        //     text-align: center;
+        //     &:before {
+        //         content: "";
+        //         background: #fff;
+        //         padding: 0px 7px;
+        //         border-radius: 20px;
+        //         position: relative;
+        //         right: -12px;
+        //         z-index: -1;
+        //     }
+        // }
     }
 }

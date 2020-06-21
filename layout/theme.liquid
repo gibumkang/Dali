@@ -36,7 +36,7 @@
                                     <li><a href= ="{{ link.url }}">{{ link.title }}</a></li>
                                 {% endif %}
                             {% endfor %}
-                            <li><a href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="count-container"><span class="cart-count">{{cart.item_count}}</span></span></a></li>
+                            <li><a href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>{% if cart.item_count > 0 %}<span class="count-container"><span class="cart-count">{{cart.item_count}}</span></span>{% endif %}</a></li>
                             {% if shop.customer_accounts_enabled %}
                                 {% if customer %}
                                     <li><a href="/account">account</a></li>
