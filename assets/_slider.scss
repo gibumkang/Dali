@@ -63,4 +63,12 @@
 
 #featured-swiper-container {
     max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    .swiper-pagination {
+        right: 175px;
+        span {
+            margin: 0rem 0.25rem;
+        }
+    }
 }

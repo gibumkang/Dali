@@ -2,21 +2,24 @@
     display: flex;
     margin: 0 auto;
     align-items: center;
+    padding: 1.5rem;
     section {
-        margin: 1.5rem;
         flex: 1;
     }
     .product-info {
+        padding-left: 2.5rem;
         h3 {
             color: #001;
         }
         .price {
             font-family: "Prata", serif;
+            text-align: right;
         }
     }
     .form-flex {
         display: flex;
         margin: $padding 0rem;
+        align-items: center;
         input,
         section {
             flex: 1;
