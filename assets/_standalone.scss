@@ -3,9 +3,6 @@
     margin: 0 auto;
     align-items: center;
     padding: 1.5rem;
-    section {
-        flex: 1;
-    }
     .product-info {
         padding-left: 2.5rem;
         h3 {
@@ -14,6 +11,7 @@
         .price {
             font-family: "Prata", serif;
             text-align: right;
+            text-decoration: underline $secondary-color;
         }
     }
     .form-flex {

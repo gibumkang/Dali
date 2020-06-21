@@ -51,10 +51,16 @@
                 </div>
             </nav>
         </div>
+        {% if template != 'index' %}
+        <div class="full-width page-title">
+            <div class="main-wrapper centered">
+                <h1>{{ page_title }}</h1>
+            </div>
+        </div>
+        {% endif %}
         <main role="main">
             {{ content_for_layout }}
         </main>
-        {{ "swiper.min.js" | asset_url | script_tag }}
-        {{ "application.js" | asset_url | script_tag }}
+        {% include 'footer' %}
     </body>
 </html>

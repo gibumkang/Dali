@@ -12,3 +12,9 @@
         padding: 2.5rem $padding;
     }
 }
+
+.full-view-grid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+}
