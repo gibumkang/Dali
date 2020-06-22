@@ -76,3 +76,9 @@
 .swiper-pagination-bullet-active {
     background: $secondary-color;
 }
+
+.swiper-container {
+    &:hover {
+        cursor: pointer;
+    }
+}

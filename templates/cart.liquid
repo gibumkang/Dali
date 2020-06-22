@@ -1,14 +1,90 @@
-<section class="full-view-grid">
-    <article class="main-wrapper centered">
+<section class="full-height-grid main-wrapper centered xy-padding">
+    <article>
         {% if cart.item_count > 0 %}
-        <h1>cart</h1>
         <form action="/cart" method="post" novalidate>
-            <table>
+            <section class="cart-container">
+                <article>
+                    <div class="cart">
+                        <div class="bold-title">Product</div>
+                        <div class="bold-title">Price Per Item</div>
+                        <div class="bold-title">Quantity</div>
+                        <div class="bold-title">Sub Total</div>
+                    </div>
+                    {% for item in cart.items %}
+                    <hr />
+                    <div class="cart cart-centered">
+                        <div class="product-frame">
+                            <a href="{{ item.url | within: collections.all }}">
+                                <img
+                                    src="{{ item | img_url: 'medium' }}"
+                                    alt="{{ item.title | escape }}"
+                                />
+                            </a>
+                            <a href="{{ item.url }}">
+                                <div class="product-title">
+                                    {{ item.quantity }} x
+                                    {{ item.product.title }}
+                                </div></a
+                            >
+                            <!-- <div>{{ item.variant.title }}</div> -->
+                        </div>
+                        <div class="price">{{ item.price | money }}</div>
+                        <div class="quantity-flex">
+                            <input
+                                type="number"
+                                name="updates[]"
+                                id="updates_{{ item.key }}"
+                                value="{{ item.quantity }}"
+                                min="0"
+                            />
+                            <a
+                                href="/cart/change?line={{
+                                    forloop.index
+                                }}&amp;quantity=0"
+                                class="button is-danger is-small"
+                                >x</a
+                            >
+                        </div>
+                        <div class="price">
+                            {% if item.original_line_price != item.line_price
+                            %}{{ item.original_line_price | money }}{% endif %}
+                            {{ item.line_price | money }}
+                            {% for discount in item.discounts %}{{
+                                discount.title
+                            }}{% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+                <aside>
+                    <div class="title">Grand Total</div>
+                    <div class="total">{{ cart.total_price | money }}</div>
+                    <p class="checkout-info y-padding">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ullam, suscipit veritatis doloribus accusantium
+                        aut sed ex necessitatibus magni id officia alias amet a
+                        natus molestias, quam odit iusto nemo fugiat.
+                    </p>
+                    <div class="flex-checkout">
+                        <button type="submit" name="update" class="button">
+                            Update
+                        </button>
+                        <button
+                            type="submit"
+                            name="checkout"
+                            class="button is-success"
+                        >
+                            Checkout
+                        </button>
+                    </div>
+                </aside>
+            </section>
+            <!-- <table>
                 <thead>
-                    <th colspan="2">Prod</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>total</th>
+                    <th colspan="2"></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </thead>
                 <tbody>
                     {% for item in cart.items %}
@@ -59,7 +135,7 @@
                 <p>sub total : {{ cart.total_price | money }}</p>
                 <button type="submit" name="update">Update</button>
                 <button type="submit" name="checkout">Checkout</button>
-            </div>
+            </div> -->
         </form>
         {% else %}
         <h2>cart</h2>

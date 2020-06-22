@@ -3,6 +3,17 @@
     margin: 0 auto;
     align-items: center;
     padding: 1.5rem;
+    border: 2px solid #f6f6f6;
+    border-radius: 15px;
+    .image {
+        img {
+            border-radius: 15px;
+            max-width: 390px;
+        }
+        .swiper-pagination {
+            top: 7px;
+        }
+    }
     .product-info {
         padding-left: 2.5rem;
         h3 {

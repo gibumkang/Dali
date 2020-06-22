@@ -3,13 +3,15 @@
 @import "https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css";
 /* prettier-ignore */
 @import url('https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@400;700&family=Rubik:wght@400;500&display=swap');
-@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+/* font-awesome */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import "./variables";
 @import "./helper";
 @import "./slider";
 @import "./grid-styles";
 @import "./header";
 @import "./standalone";
+@import "./cart";
 @import "./footer";
 
 /* color palette: https://colors.muz.li/palette/deff99/9cb36b/f7ffe6/efffcc/efffcc */
