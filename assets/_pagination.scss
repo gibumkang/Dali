@@ -1,0 +1,32 @@
+.paginated {
+    position: relative;
+    margin: $padding auto;
+    text-transform: uppercase;
+    a {
+        color: #666;
+        font-size: 0.8rem;
+        transition: color 0.25s ease-in-out;
+        &:hover {
+            color: #001;
+        }
+    }
+    .next,
+    .prev {
+        position: absolute;
+    }
+    .next {
+        right: $padding;
+    }
+    .prev {
+        left: $padding;
+    }
+    .page {
+        padding: 0rem 0.25rem;
+        font-family: "Prata", serif;
+    }
+    .page.current {
+        border-bottom: 2px $primary-color solid;
+        font-size: 1.25rem;
+        padding: 0.1rem 0.5rem;
+    }
+}

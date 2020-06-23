@@ -13,7 +13,7 @@
         {{ "application.css" | asset_url | stylesheet_tag }}
     </head>
     <body>
-        <div class="main-wrapper centered relative">
+        <header class="main-wrapper centered relative">
             <nav {% if template == 'index' %}id="home-nav"{% endif %}>
                 <div class="level">
                     <div class="level-left">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </header>
         {% if template != 'index' %}
         <div class="full-width page-title">
             <div class="main-wrapper centered">
