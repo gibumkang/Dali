@@ -1,12 +1,16 @@
 .blog {
     display: grid;
-    height: 100vh;
+    grid-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     @media screen and (max-width: 900px) {
         grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 560px) {
-        display: block;
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+    section {
+        padding: $padding 0rem;
     }
     section > article {
         padding-right: $padding;
@@ -29,5 +33,13 @@
         @media screen and (max-width: 560px) {
             max-width: 100%;
         }
+    }
+    .meta-info {
+        span {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        text-transform: uppercase;
+        font-size: 0.7rem;
     }
 }

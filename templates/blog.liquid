@@ -11,8 +11,8 @@
                     src="{{ article.image.src | img_url: 'medium' }}"
                     alt="{{ article.image.alt }}"
             /></a>
-            <aside>
-                <strong>{{ article.author }}</strong> @
+            <aside class="meta-info">
+                <span>{{ article.author }}</span> @
                 {{ article.created_at | date: format:"short" }}
             </aside>
         </article>
